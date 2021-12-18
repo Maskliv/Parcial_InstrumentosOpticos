@@ -55,7 +55,7 @@ if options.dft
     UdoblePrima = (dx*dy)*fftshift(DFT_selfMade(Uprima));
     campoPropagado = frenteParabolicoUz.*UdoblePrima;
 else
-    Uprima = campoEntrada.*frenteParabolicoU0;
+    Uprima = (campoEntrada).*frenteParabolicoU0;
     UdoblePrima = (dx*dy)*fftshift(fft2(Uprima));
     campoPropagado = frenteParabolicoUz.*UdoblePrima;
 end

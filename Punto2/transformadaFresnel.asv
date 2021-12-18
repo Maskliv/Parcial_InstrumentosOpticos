@@ -48,7 +48,7 @@ k = 2*pi/waveLength;
 
 
 frenteParabolicoU0 = exp((1i*k*A/(2*B))*((X0.^2) + (Y0.^2))); % transformada de fourier Fución De respuesta al Impulso
-frenteParabolicoUz = (exp(1i*k*L0))*exp((1i*k/(2*B))*D*((X.^2) + (Y.^2)));
+frenteParabolicoUz = (exp(2i*k*L0))*exp((1i*k*D/(2*B))*((X.^2) + (Y.^2)));
 
 if options.dft
     Uprima = campoEntrada.*frenteParabolicoU0;
