@@ -1,0 +1,8 @@
+function [planeWaveProfile] = plane_wave2D(waveLength, angleDegrees, xRange,yRange)
+%UNTITLED5 Summary of this function goes here
+%   Detailed explanation goes here
+k = 2*pi/waveLength;
+[X,Y] = meshgrid(xRange,yRange);
+beta = sin(deg2rad(angleDegrees));
+planeWaveProfile = exp(1i* k*Y *beta);
+end

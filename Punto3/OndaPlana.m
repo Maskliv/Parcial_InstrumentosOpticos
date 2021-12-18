@@ -1,14 +1,7 @@
-function [rejilla] = OndaPlana(Nx,Ny,dx,dy,lambda)
-
-x = 1:Nx;
-y = 1:Ny;
-[X,Y] = meshgrid(x,y);
-
-X = X*dx;
-Y = Y*dy;
-
-a=2*pi;
-k=a/lambda;
-
-rejilla = cos(k*X);
+function [OndaPlana] = OndaPlana(lambda,angleDegrees, xRange, yRange)
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+c=ones(2048);
+[X,~] = meshgrid(xRange,yRange);
+OndaPlana=exp(c.*X*((2*pi/lambda))*1i)*sin(angleDegrees);
 end
