@@ -11,7 +11,6 @@ y=-NyCentro:1:NyCentro-1;
 
 [X,Y] = meshgrid(x,y);
 
-alpha =angleX;
-beta =angleY;
-planeWaveProfile = exp(-1i* k *sin(angleX*X*dx+Y*dy*angleY));
+
+planeWaveProfile = exp(-1i*k*(sin(angleX)*X*dx+sin(angleY)*Y*dy));
 end
