@@ -1,0 +1,15 @@
+function [planeWaveProfile] = plane_wave2D(Nx, Ny, angleX, angleY, dx, dy, k)
+%UNTITLED5 Summary of this function goes here
+%   Detailed explanation goes here
+NxCentro=(Nx/2);
+NyCentro=(Ny/2);
+
+x=-NxCentro:dx:NxCentro-dx;
+y=[-NyCentro,NyCentro];
+
+[X,Y] = meshgrid(x,y);
+
+alpha = cos(angleX);
+beta = cos(angleY);
+planeWaveProfile = exp(-1i* k * (X*alpha*dx+Y*beta*dy));
+end
